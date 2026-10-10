@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Product Videos With Claude</title>
+<meta name="description" content="Make your own product videos with Claude and Fish Audio: study references frame by frame, storyboard, build, cast and direct AI voices, and score with free Mixkit sound. 8 copy-paste prompts. By @vibha.in.progress">
+<meta property="og:title" content="Make your own product videos with Claude + Fish Audio"><meta property="og:image" content="img/heyfixit.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F3ECE1;--paper:#FBF7F1;--esp:#2A1F1A;--esp2:#5A4A40;--terra:#C8553D;--gold:#F2C46D;--sage:#6E8B74;--chip:#F6DCD3;--line:rgba(42,31,26,.14);--grid:rgba(42,31,26,.06)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background-color:var(--cream);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;
+  color:var(--esp);font:400 16.5px/1.6 'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--terra);text-underline-offset:3px}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px}
+.nw{white-space:nowrap}
+header{padding:18px 0 34px}
+.topline{display:flex;justify-content:space-between;gap:12px;font:500 10.5px/1.4 'JetBrains Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--esp2);padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:30px}
+h1{font:400 clamp(46px,12.5vw,84px)/.95 'Instrument Serif',serif;letter-spacing:-.02em}
+h1 em{color:var(--terra)}
+h1 .ul{background:linear-gradient(var(--terra),var(--terra)) 0 92%/100% 5px no-repeat;padding-bottom:4px}
+.dek{margin-top:18px;font-size:clamp(16.5px,4.4vw,19px);line-height:1.5;color:var(--esp2);max-width:34em}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.pills a{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--esp);background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--terra);border-radius:10px;padding:9px 12px;font:600 14px 'Inter',sans-serif}
+.pills a span{font:700 11px 'JetBrains Mono',monospace;color:var(--terra)}
+.by{margin-top:20px;font:700 12.5px 'JetBrains Mono',monospace;letter-spacing:.06em;color:var(--esp2)}
+.kicker{font:700 11.5px/1.4 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+h2{font:400 clamp(32px,8.4vw,46px)/1.02 'Instrument Serif',serif;letter-spacing:-.01em;margin-top:2px}
+h2 em{color:var(--terra)}
+h3{font:700 11.5px/1.4 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+h3:before{content:"";width:8px;height:8px;border-radius:2px;background:var(--terra);flex:none}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px}
+.honest{margin-top:16px;border-left:5px solid var(--terra);background:linear-gradient(90deg,rgba(242,196,109,.38),rgba(242,196,109,.16));border-radius:4px 14px 14px 4px;padding:14px 16px;font-weight:600}
+.needs{display:grid;gap:10px;margin-top:14px}
+.need{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px}
+.need .n{font:700 12px 'JetBrains Mono',monospace;color:var(--gold);background:var(--esp);border-radius:8px;padding:4px 8px;margin-top:2px}
+.need b{display:block}
+.need p{color:var(--esp2);font-size:15px}
+section{padding-top:40px;margin-top:32px;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0;margin-top:0;padding-top:8px}
+.stephead{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.stepnum{flex:none;width:52px;height:52px;border-radius:14px;background:var(--terra);color:#fff;font:700 18px/52px 'JetBrains Mono',monospace;text-align:center;box-shadow:0 8px 18px -8px rgba(200,85,61,.7)}
+.why{font-size:17px}
+.note{margin-top:16px;font-size:15.5px;color:var(--esp2)}
+.note b{color:var(--esp)}
+.note.small{font-size:14px}
+.ph{color:var(--terra);background:var(--chip);border-radius:5px;padding:0 4px;font-weight:600}
+.pblock{margin-top:16px;background:var(--esp);border-radius:18px;overflow:hidden;box-shadow:0 16px 30px -18px rgba(42,31,26,.7)}
+.pblock figcaption{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 11px 11px 16px;border-bottom:1px solid rgba(243,236,225,.12)}
+.plabel{color:var(--cream);font:600 14px/1.35 'Inter',sans-serif;min-width:0}
+.ptag{display:inline-block;font:700 10.5px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--esp);background:var(--gold);border-radius:999px;padding:3px 8px;margin-right:8px;vertical-align:1px}
+button.copy{flex:none;font:700 13px 'JetBrains Mono',monospace;letter-spacing:.04em;color:#fff;background:var(--terra);border:0;border-radius:999px;padding:9px 18px;cursor:pointer;min-height:40px;transition:transform .15s ease-out,background .2s}
+button.copy:active{transform:scale(.96)}
+button.copy.done{background:var(--sage)}
+.pblock pre{margin:0;padding:16px;color:var(--cream);font:400 14px/1.65 'JetBrains Mono',monospace;white-space:pre-wrap;overflow-wrap:anywhere}
+.pblock .cmd{color:#8FB8FF;font-weight:700}
+.pblock .ph{color:var(--gold);background:rgba(242,196,109,.15);font-weight:700}
+.check{margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px}
+.check ol{list-style:none;counter-reset:o;display:grid;gap:10px}
+.check li{counter-increment:o;display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
+.check li:before{content:counter(o);width:28px;height:28px;border-radius:8px;background:var(--esp);color:var(--gold);font:700 13px/28px 'JetBrains Mono',monospace;text-align:center}
+.check li span{padding-top:2px}
+.check b{font-weight:700}
+.duo{display:grid;gap:10px;margin-top:12px}
+.duo p{border-radius:14px;padding:14px 16px;font-size:15.5px}
+.free{background:var(--esp);color:var(--cream)}
+.free b{color:var(--gold)}
+.priv{background:var(--chip);color:var(--esp)}
+.priv b{color:var(--terra)}
+details.manual{margin-top:12px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+details.manual summary{cursor:pointer;font-weight:600;color:var(--terra)}
+details.manual ol{margin:10px 0 2px 20px;display:grid;gap:6px;font-size:15.5px;color:var(--esp2);overflow-wrap:anywhere}
+.tips,.see{margin-top:16px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px}
+.tips ul,.see ul{list-style:none;display:grid;gap:8px}
+.tips li,.see li{position:relative;padding-left:26px;overflow-wrap:anywhere}
+.see li:before{content:"✓";position:absolute;left:0;color:var(--sage);font-weight:700}
+.tips li:before{content:"→";position:absolute;left:0;color:var(--terra);font-weight:700}
+.example{margin-top:40px;background:var(--esp);color:var(--cream);border-radius:24px;padding:26px 18px;border-top:0}
+.example h2{color:var(--cream)}
+.example h2 em{color:var(--gold)}
+.example .kicker{color:var(--gold)}
+.flow{display:grid;gap:8px;margin-top:18px}
+.flow div{background:rgba(243,236,225,.07);border:1px solid rgba(243,236,225,.14);border-radius:14px;padding:12px 14px}
+.flow small{display:block;font:700 10.5px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
+.flow .arrow{background:none;border:0;padding:0;text-align:center;color:var(--terra);font-weight:700}
+.big{margin-top:16px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.big b{font:400 64px/1 'Instrument Serif',serif;color:var(--gold)}
+.big span{color:rgba(243,236,225,.85)}
+.example .fine{margin-top:12px;font-size:14px;color:rgba(243,236,225,.7)}
+dl.fixes{display:grid;gap:10px;margin-top:14px}
+dl.fixes div{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+dl.fixes dt{font-weight:700}
+dl.fixes dd{color:var(--esp2);font-size:15.5px;margin-top:2px;overflow-wrap:anywhere}
+.links ul{list-style:none;margin-top:12px}
+.links li{border-bottom:1px dashed var(--line);padding:10px 0;display:flex;flex-direction:column;gap:2px}
+.links li span{font:400 12px 'JetBrains Mono',monospace;color:var(--esp2);overflow-wrap:anywhere}
+footer{margin-top:40px;border-top:2px dashed rgba(42,31,26,.25);padding:22px 0 40px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+footer .h{font:400 28px 'Instrument Serif',serif}
+footer small{font:400 12px 'JetBrains Mono',monospace;color:var(--esp2)}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%) translateY(20px);opacity:0;background:var(--esp);color:var(--cream);font:600 14px 'Inter',sans-serif;padding:10px 16px;border-radius:999px;transition:opacity .2s,transform .2s;pointer-events:none;z-index:10}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+@media (min-width:700px){.needs,.duo{grid-template-columns:1fr 1fr}.example{padding:34px 32px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none !important}}
+</style>
+</head><body><div class="wrap">
+<header>
+  <div class="topline"><span>Claude + Fish Audio</span><span>Guide / Vibha</span></div>
+  <h1>Make your own <em class="ul">product videos</em> with Claude</h1>
+  <p class="dek">The exact system from the reel. Claude studies the motion design you love, storyboards your video, builds it, casts and directs the voice with Fish Audio, and scores it with free Mixkit sound. Eight prompts, checked on 10 Oct 2026, ready to copy.</p>
+  <nav class="pills" aria-label="Steps"><a href="#step-1"><span>01</span>Fish Audio</a><a href="#step-2"><span>02</span>Study</a><a href="#step-3"><span>03</span>Storyboard</a><a href="#step-4"><span>04</span>Build</a><a href="#step-5"><span>05</span>Auditions</a><a href="#step-6"><span>06</span>Direct</a><a href="#step-7"><span>07</span>Sound</a><a href="#step-8"><span>08</span>Render</a></nav>
+  <p class="by">@vibha.in.progress · paid partnership with Fish Audio</p>
+</header>
+<main>
+<section id="start">
+  <p class="kicker">Before you start</p>
+  <h2>What you <em>need</em></h2>
+  <div class="needs">
+    <div class="need"><span class="n">1</span><div><b>The Claude desktop app, Code tab</b><p>Claude Code is built into the desktop app. It can install tools, save files and render video, which normal chat can't. You sign in with your Claude account.</p></div></div>
+    <div class="need"><span class="n">2</span><div><b>A Fish Audio account</b><p>For the voices. <a href="https://fish.audio/?fpr=9m9vy8" target="_blank" rel="noopener sponsored">Sign up here</a> (my affiliate link). The S2.1 Pro API is free until 30 November 2026.</p></div></div>
+    <div class="need"><span class="n">3</span><div><b>A folder of motion design you love</b><p>Screen-record 3 to 6 product videos or motion reels from Dribbble, Behance or your feed. They're for study only, not for copying.</p></div></div>
+    <div class="need"><span class="n">4</span><div><b>About 30 minutes per video</b><p>The first setup takes longer. After that, my videos took under 30 minutes each, mostly me giving notes.</p></div></div>
+  </div>
+  <p class="honest">Honest bit: Claude drafts, you direct. Every step ends with Claude showing you something to approve. Your taste and your notes are what make the video good.</p>
+</section>
+<section class="step" id="step-1"><div class="stephead"><span class="stepnum">01</span><div><p class="kicker">Step 1</p><h2>Give Claude a voice with <em>Fish Audio</em></h2></div></div>
+<p class="why">Two things go in once: the Fish Audio MCP server (so Claude can browse voices and generate speech from your account) and the official Fish Audio skill pack (so it writes correct Fish Audio code). Paste this and follow what Claude tells you.</p><figure class="pblock"><figcaption><span class="plabel"><span class="ptag">Prompt 01</span>Connect Fish Audio</span>
+<button class="copy" type="button" data-target="c1" aria-label="Copy: Connect Fish Audio">Copy</button></figcaption><pre id="c1">I&#x27;m not technical, so do everything for me. Connect Fish Audio to this project so you can voice my videos.
+1. Add the Fish Audio MCP server: <span class="cmd">claude mcp add --transport http fish-audio https://api.fish.audio<span class="cmd">/mcp</span></span>
+   Then tell me to run /mcp so I can sign in to my Fish Audio account. It uses OAuth, so no API key is needed for this part.
+2. Install the official Fish Audio skill pack: <span class="cmd">npx skills add https://docs.fish.audio</span>
+   It adds two skills, fish-audio-sdk and fish-audio-api, so you write correct Fish Audio code.
+3. For scripted voiceovers, use the free model <span class="cmd">s2.1-pro-free</span> through the Fish Audio API. Create a .env file and open it for me so I can paste my key from fish.audio/app/api-keys. Never print the key, never put it in code or in chat.
+4. Test everything: generate one 5-second line in a warm English voice, play it for me, and tell me the voice name, how long it took and where the file is saved.
+If I need to click anything or restart the app, tell me exactly what, step by step.</pre></figure><div class="duo"><p class="free"><b>Free until 30 Nov 2026.</b> Fish Audio's S2.1 Pro model is a free API under their fair use policy, model string s2.1-pro-free. This is from <a href="https://fish.audio/blog/s2-1-pro-free-api/" target="_blank" rel="noopener" style="color:var(--gold)">Fish Audio's own blog</a>.</p><p class="priv"><b>Two kinds of credit.</b> The MCP connection uses your Fish Audio plan credits, like the web app. The free S2.1 Pro model runs through the API with your key. Prompt 01 sets up both.</p></div><div class="see"><h3>What you should see</h3><ul><li>Claude says the fish-audio MCP server is added and asks you to run <span class="nw">/mcp</span> to sign in.</li><li>Two new skills: fish-audio-sdk and fish-audio-api.</li><li>A 5-second test clip plays, with the voice name and file path.</li></ul></div></section><section class="step" id="step-2"><div class="stephead"><span class="stepnum">02</span><div><p class="kicker">Step 2</p><h2>Let Claude study every <em>frame</em></h2></div></div>
+<p class="why">Drop your screen recordings into one folder. Claude pulls frames, finds every cut and reads contact sheets, so it learns the pace, palette and moves of the work you love, then writes it down as rules.</p><figure class="pblock"><figcaption><span class="plabel"><span class="ptag">Prompt 02</span>Study your references frame by frame</span>
+<button class="copy" type="button" data-target="c2" aria-label="Copy: Study your references frame by frame">Copy</button></figcaption><pre id="c2">I&#x27;m not technical, so do everything for me. You&#x27;re my motion design director. In <span class="ph">[FOLDER, e.g. ~/motion-refs/]</span> there are <span class="ph">[NUMBER]</span> screen recordings of motion design videos I love. Study every one of them frame by frame before you write anything. If ffmpeg isn&#x27;t installed, install it first.
+1. Extract frames: ffmpeg -i &quot;$f&quot; -vf &quot;fps=4,scale=1280:-1&quot; frames/$name/%04d.jpg
+2. Find every cut: ffmpeg -i &quot;$f&quot; -vf &quot;select=&#x27;gt(scene,0.3)&#x27;,showinfo&quot; -f null - and log the timestamps
+3. Make a contact sheet per video: ffmpeg -i &quot;$f&quot; -vf &quot;fps=1,scale=480:-1,tile=6x4&quot; sheets/$name.jpg, then read every sheet
+For each video give me: the palette (hex), the type (families, weights, sizes), every camera move, the transition at each cut, easing and pace (average shot length in seconds), signature moves worth stealing and moves to avoid.
+Finish with ONE house style I can reuse: 10 rules, each pointing to the frame it came from. Save it as house-style.md and show it to me.</pre></figure><div class="see"><h3>What you should see</h3><ul><li>A short breakdown per video: colours, fonts, camera moves, cut timings.</li><li>house-style.md with 10 rules, each linked to a real frame.</li></ul></div></section><section class="step" id="step-3"><div class="stephead"><span class="stepnum">03</span><div><p class="kicker">Step 3</p><h2><em>Storyboard</em> before you build</h2></div></div>
+<p class="why">This is where you save hours. You approve the story and layout in grey boxes before a single colour frame exists.</p><figure class="pblock"><figcaption><span class="plabel"><span class="ptag">Prompt 03</span>Storyboard and wireframe</span>
+<button class="copy" type="button" data-target="c3" aria-label="Copy: Storyboard and wireframe">Copy</button></figcaption><pre id="c3">Using house-style.md, storyboard a <span class="ph">[30-45]</span>s product video for <span class="ph">[PRODUCT]</span> (<span class="ph">[WEBSITE]</span>).
+First pull the brand palette, fonts and logo from the website.
+Give me a beat table: time, scene, on-screen text, voiceover line, motion, sound effect.
+Cut every 1.5 to 3 seconds on a <span class="ph">[122]</span> BPM grid, with the drop at <span class="ph">[12.0]</span>s.
+Story: problem, then the turn, then a product tour, then proof, then the logo.
+Then wireframe every scene as a simple grey-box frame and render ONE storyboard sheet so I can approve the layout.
+Don&#x27;t build anything in colour until I say go.</pre></figure><figure style="margin-top:16px"><img src="img/storyboard.jpg" alt="A real storyboard sheet Claude made for a Duolingo spec film, with timed panels" style="width:100%;border-radius:16px;border:1px solid var(--line)"><figcaption class="note small">My real storyboard for a Duolingo spec film. Every panel has its time, voiceover and sound effects.</figcaption></figure><div class="see"><h3>What you should see</h3><ul><li>A beat table with times, lines and sound effects.</li><li>One storyboard sheet to approve.</li></ul></div></section><section class="step" id="step-4"><div class="stephead"><span class="stepnum">04</span><div><p class="kicker">Step 4</p><h2>Build it in <em>code</em></h2></div></div>
+<p class="why">Claude writes the video as web code and renders it to MP4 with HyperFrames, a free open-source renderer. Because it is code, every edit is a sentence, not an afternoon in an editor.</p><figure class="pblock"><figcaption><span class="plabel"><span class="ptag">Prompt 04</span>Build the video</span>
+<button class="copy" type="button" data-target="c4" aria-label="Copy: Build the video">Copy</button></figcaption><pre id="c4">I&#x27;m not technical, so do everything for me. Build the video from the storyboard I approved.
+Use HyperFrames (free and open source, github.com/heygen-com/hyperframes) to write every scene as HTML and render it to MP4. Install it if it isn&#x27;t there.
+Follow house-style.md exactly. Recreate the product&#x27;s screens in code instead of using blurry screenshots, so every frame stays sharp.
+Output 1920x1080 at 30fps, plus a 1080x1920 vertical version for Reels.
+Leave clearly marked gaps where the voiceover goes.
+Before rendering, show me a contact sheet of the key frames and wait for my notes.</pre></figure><div class="tips"><h3>Make it better</h3><ul><li>Give notes like a creative director: "faster cuts in the middle", "the logo needs more air".</li><li>Ask for a 10-second preview of any scene before a full render.</li></ul></div></section><section class="step" id="step-5"><div class="stephead"><span class="stepnum">05</span><div><p class="kicker">Step 5</p><h2>Hold voice <em>auditions</em></h2></div></div>
+<p class="why">Claude casts the voice for you. It picks five Fish Audio voices, has each one read the same lines, checks every word, then waits for you to choose.</p><figure class="pblock"><figcaption><span class="plabel"><span class="ptag">Prompt 05</span>Audition voices</span>
+<button class="copy" type="button" data-target="c5" aria-label="Copy: Audition voices">Copy</button></figcaption><pre id="c5">Audition voices for this script. Pick 5 Fish Audio library voices that fit <span class="ph">[CHARACTER, e.g. a calm British helpdesk agent]</span>. No celebrity clones.
+Have each voice read the same 2 lines: one emotional, one businesslike, so I can hear the range.
+Save them as voice-1-[name].mp3 to voice-5-[name].mp3 in audio/auditions/.
+Give each one a one-line note: tone, pace, what it&#x27;s best for.
+Transcribe every take with Whisper to check every word came out right.
+Then wait for me to pick.</pre></figure><div class="see"><h3>What you should see</h3><ul><li>Five short MP3s with a one-line note each.</li><li>You pick one. In my reel, it was "Go with 2, Alok."</li></ul></div></section><section class="step" id="step-6"><div class="stephead"><span class="stepnum">06</span><div><p class="kicker">Step 6</p><h2>Direct the voice <em>acting</em></h2></div></div>
+<p class="why">This is the part that makes it sound human. Fish Audio S2.1 Pro takes emotion tags written like notes to a voice actor, and Claude places them line by line.</p><figure class="pblock"><figcaption><span class="plabel"><span class="ptag">Prompt 06</span>Direct the performance</span>
+<button class="copy" type="button" data-target="c6" aria-label="Copy: Direct the performance">Copy</button></figcaption><pre id="c6">Now direct the performance like a voice actor, using the voice I picked.
+Add Fish Audio S2.1 Pro emotion tags in square brackets wherever the feeling changes. Pair a physical cue with an emotion, for example [sighs] [frustrated], [empathetic], [calm], [surprised].
+Tags affect everything after them, so place them exactly where the mood shifts.
+Vary pace and pauses to match the beat sheet. Re-generate any line that sounds flat.
+Check every take with Whisper, then show me the script with the tags so I can approve it.</pre></figure><div class="check"><h3>A real example from my Heyfixit film</h3><ol><li><span><b>Caller:</b> [frustrated] Hello? Finally! There's water pouring out from under the kitchen sink on the third floor!</span></li><li><span><b>Dan:</b> [empathetic] I'm so sorry, that sounds really stressful. I'm Dan, from the Heyfixit helpdesk, and I've got you.</span></li><li><span><b>Caller:</b> [surprised] Oh! He's here already? ...Brilliant.</span></li></ol></div></section><section class="step" id="step-7"><div class="stephead"><span class="stepnum">07</span><div><p class="kicker">Step 7</p><h2>Score it with free <em>Mixkit</em> sound</h2></div></div>
+<p class="why">Music and sound effects are half of a good product video. Mixkit has free music and sound effects you can use in commercial social videos, and Claude reads the license first.</p><figure class="pblock"><figcaption><span class="plabel"><span class="ptag">Prompt 07</span>Mixkit sound setup</span>
+<button class="copy" type="button" data-target="c7" aria-label="Copy: Mixkit sound setup">Copy</button></figcaption><pre id="c7">Be my sound designer for this video. Use Mixkit (mixkit.co) as the ONLY source for music and sound effects.
+1. First read Mixkit&#x27;s Sound Effects Free License and Stock Music Free License and confirm they cover commercial use in social video.
+2. From my beat sheet, list every sound we need: a whoosh before each transition, a thump on hard cuts, pops for on-screen UI, a riser into the drop, and one music bed at <span class="ph">[122]</span> BPM.
+3. Search mixkit.co for each one, download the best 2 options into audio/sfx/ and audio/music/, and log the title, URL and license of every file in CREDITS.md.
+4. Detect every cut and beat in my render with ffmpeg, place the sound effects on them and duck the music 8 dB under the voiceover.
+5. Master to -14 LUFS and send me a 10-second preview before the full export.</pre></figure><div class="see"><h3>What you should see</h3><ul><li>A CREDITS.md listing every sound with its URL and license.</li><li>A 10-second preview with whooshes, thumps and pops on the cuts.</li></ul></div></section><section class="step" id="step-8"><div class="stephead"><span class="stepnum">08</span><div><p class="kicker">Step 8</p><h2>Render the <em>final</em> video</h2></div></div>
+<p class="why">Everything comes together: picture, voice and sound, timed to the beat.</p><figure class="pblock"><figcaption><span class="plabel"><span class="ptag">Prompt 08</span>Final render</span>
+<button class="copy" type="button" data-target="c8" aria-label="Copy: Final render">Copy</button></figcaption><pre id="c8">Final pass. Put it all together: the approved video, the Fish Audio voiceover and the Mixkit sound.
+Line the voiceover up with the beat sheet so every line lands on its scene.
+Render the final MP4 at 1080p, 30fps, in both 16:9 and 9:16.
+Then play it back in your head beat by beat, fix anything that feels rushed or off the grid, and tell me what you changed.
+Last, give me a list of the 3 frames you&#x27;d use as thumbnails.</pre></figure><div class="see"><h3>What you should see</h3><ul><li>A 16:9 and a 9:16 MP4, ready to post.</li><li>A short list of what Claude fixed in its final pass.</li></ul></div></section><section class="example"><p class="kicker">Real result</p><h2>One video, <em>16 leads</em> in a week</h2>
+<img src="img/heyfixit.jpg" alt="A frame from the Heyfixit launch film: a wireframe building with a glowing green route" style="width:100%;border-radius:14px;margin-top:16px">
+<div class="big"><b>16</b><span>high quality leads in one week of posting, for my business, from the Heyfixit launch film made this way.</span></div>
+<p class="fine">That's my result, not a promise. Your product, offer and audience decide yours.</p></section>
+<section id="fixes"><p class="kicker">If something goes wrong</p><h2>Quick <em>fixes</em></h2><dl class="fixes">
+<div><dt>Claude says it can't find the fish-audio tools</dt><dd>Run /mcp in the Code tab and sign in to Fish Audio again. Then start a new session.</dd></div>
+<div><dt>The voice sounds flat</dt><dd>Ask Claude to move the emotion tag right before the word where the feeling changes, and to re-generate just that line.</dd></div>
+<div><dt>A word is mispronounced</dt><dd>Ask Claude to spell it the way it sounds in the script (for example "Hey-fix-it") and re-check with Whisper.</dd></div>
+<div><dt>The video feels slow</dt><dd>Say "cut every 1.5 seconds and keep the camera moving". Pace is the fastest fix there is.</dd></div>
+<div><dt>Using it for client work</dt><dd>The free S2.1 Pro API has no uptime guarantee, and Fish Audio says some commercial uses may have restrictions. Check their pricing and rate limits page, or use a paid plan, before client work.</dd></div>
+</dl></section>
+<section class="links"><p class="kicker">Everything linked</p><h2>The <em>links</em></h2><ul>
+<li><a href="https://fish.audio/?fpr=9m9vy8" target="_blank" rel="noopener sponsored">Fish Audio (my affiliate link)</a><span>fish.audio</span></li>
+<li><a href="https://docs.fish.audio/overview/mcp" target="_blank" rel="noopener">Fish Audio MCP server docs</a><span>docs.fish.audio/overview/mcp</span></li>
+<li><a href="https://docs.fish.audio/developer-guide/resources/coding-agents" target="_blank" rel="noopener">Fish Audio skill pack for coding agents</a><span>npx skills add https://docs.fish.audio</span></li>
+<li><a href="https://fish.audio/blog/s2-1-pro-free-api/" target="_blank" rel="noopener">S2.1 Pro free API, free until 30 Nov 2026</a><span>fish.audio/blog/s2-1-pro-free-api</span></li>
+<li><a href="https://fish.audio/app/api-keys/" target="_blank" rel="noopener">Get your Fish Audio API key</a><span>fish.audio/app/api-keys</span></li>
+<li><a href="https://mixkit.co/license/" target="_blank" rel="noopener">Mixkit free licenses</a><span>mixkit.co/license</span></li>
+<li><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">HyperFrames, the free video renderer</a><span>github.com/heygen-com/hyperframes</span></li>
+<li><a href="https://claude.ai/download" target="_blank" rel="noopener">Claude desktop app</a><span>claude.ai/download</span></li>
+</ul></section>
+</main>
+<footer><span class="h">Love, Vibha</span><small>@vibha.in.progress · paid partnership with Fish Audio · Fish link is an affiliate link</small></footer>
+<div class="toast" role="status" aria-live="polite"></div>
+</div>
+<script>
+(function(){
+  var toast=document.querySelector('.toast'),t;
+  function show(msg){toast.textContent=msg;toast.classList.add('on');clearTimeout(t);t=setTimeout(function(){toast.classList.remove('on')},1600)}
+  function fallback(text){
+    var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.top='-1000px';ta.style.opacity='0';
+    document.body.appendChild(ta);ta.select();ta.setSelectionRange(0,text.length);
+    var ok=false;try{ok=document.execCommand('copy')}catch(e){ok=false}
+    document.body.removeChild(ta);return ok;
+  }
+  function done(btn,ok){
+    btn.textContent=ok?'Copied':'Select + copy';btn.classList.toggle('done',ok);
+    show(ok?'Copied. Paste it into Claude.':'Copy blocked here. Long-press the text to copy.');
+    setTimeout(function(){btn.textContent='Copy';btn.classList.remove('done')},1800);
+  }
+  document.querySelectorAll('button.copy').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var pre=document.getElementById(btn.getAttribute('data-target'));var text=pre?pre.innerText:'';
+      try{
+        if(navigator.clipboard&&window.isSecureContext){
+          navigator.clipboard.writeText(text).then(function(){done(btn,true)},function(){done(btn,fallback(text))});
+        }else{done(btn,fallback(text))}
+      }catch(e){done(btn,fallback(text))}
+    });
+  });
+})();
+</script>
+</body></html>
